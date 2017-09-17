@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
-public class ConsistentHashingTest {
+public class RendezvousHashingTest {
 
     @Test
     public void testDefineDestiantion() {
@@ -37,7 +37,7 @@ public class ConsistentHashingTest {
         // Dispersing between 3 nodes
         for (int i = 0; i < 10; i++) {
             String objectId = String.valueOf(i);
-            destination.put(objectId, ConsistentHashing.defineDestination(objectId, nodeIds));
+            destination.put(objectId, RendezvousHashing.defineDestination(objectId, nodeIds));
         }
 
         String nodeId4 = "4";
@@ -49,7 +49,7 @@ public class ConsistentHashingTest {
         // Dispersing between 4 nodes
         for (int i = 0; i < 10; i++) {
             String objectId = String.valueOf(i);
-            newDestination.put(objectId, ConsistentHashing.defineDestination(objectId, nodeIds));
+            newDestination.put(objectId, RendezvousHashing.defineDestination(objectId, nodeIds));
         }
 
         // Check object moved only to new node
@@ -67,7 +67,7 @@ public class ConsistentHashingTest {
         // Dispersing between nodes after removing second node
         for (int i = 0; i < 10; i++) {
             String objectId = String.valueOf(i);
-            destinationRemovedSecond.put(objectId, ConsistentHashing.defineDestination(objectId, nodeIds));
+            destinationRemovedSecond.put(objectId, RendezvousHashing.defineDestination(objectId, nodeIds));
         }
 
         // Check after removing second node only its objects moved

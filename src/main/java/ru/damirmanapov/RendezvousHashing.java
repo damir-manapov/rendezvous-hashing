@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class ConsistentHashing {
+public class RendezvousHashing {
 
     public static String defineDestination(String key, Set<String> nodeIds) {
 

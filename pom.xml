@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.damirmanapov</groupId>
-    <artifactId>microservice_template</artifactId>
+    <artifactId>rendezvous-hashing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>rendezvous-hashing</name>
+    <name>Rendezvous hashing</name>
     <description>Rendezvous hashing implementation</description>
 
     <properties>
@@ -33,7 +33,6 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
-
 
         <!-- Cryptography -->
         <dependency>
